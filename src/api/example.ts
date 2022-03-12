@@ -6,7 +6,7 @@ export interface User{
     enable:boolean
     address:string
 }
-declare module './index'{
+declare module '.'{
     interface ApiMap{
         '/user/info'(param:{id:string}):Format<User>
         '/user/update'(param:{id:string,update:Partial<User>}):Format<boolean>

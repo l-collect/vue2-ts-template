@@ -1,7 +1,6 @@
 type ApiBase={
     [P in string]:(...args:any[])=>any
 }
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ApiMap extends ApiBase{}
 type Parameter<T extends (param:any) => any> = T extends (param: infer P) => any ? P : never;
 export type Param<D extends keyof ApiMap>=Parameter<ApiMap[D]>

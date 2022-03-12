@@ -20,5 +20,11 @@ updateUserInfo({id:'a01',update:{address:'chengdu'}}).then(res=>{
     HelloWorld,
   },
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  mounted(){
+    this.$api.getUserInfo({id:'111'}).then(res=>{
+      res.result.age
+    })
+  }
+}
 </script>
