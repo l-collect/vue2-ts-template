@@ -22,8 +22,9 @@ updateUserInfo({id:'a01',update:{address:'chengdu'}}).then(res=>{
 })
 export default class HomeView extends Vue {
   mounted(){
-    this.$api.getUserInfo({id:'111'}).then(res=>{
-      res.result.age
+    this.$api.getUserList().then(res=>{
+      const {list,...page}=res.result
+      console.log(page,list)
     })
   }
 }

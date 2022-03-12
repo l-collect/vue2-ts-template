@@ -1,5 +1,3 @@
-import {Dict} from "@/utils/types";
-
 export function merge<T extends object>(base:T,other:T){
     Object.entries(other).forEach(([key,value])=>{
         // @ts-ignore
